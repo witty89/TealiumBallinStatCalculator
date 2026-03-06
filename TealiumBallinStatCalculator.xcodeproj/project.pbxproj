@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FA60F2412F5AAF5B00185908 /* TealiumCore in Frameworks */ = {isa = PBXBuildFile; productRef = FA60F2402F5AAF5B00185908 /* TealiumCore */; };
 		FA60F2432F5AAF6A00185908 /* TealiumAutotracking in Frameworks */ = {isa = PBXBuildFile; productRef = FA60F2422F5AAF6A00185908 /* TealiumAutotracking */; };
+		FA60F2452F5AC77400185908 /* TealiumLifecycle in Frameworks */ = {isa = PBXBuildFile; productRef = FA60F2442F5AC77400185908 /* TealiumLifecycle */; };
+		FA60F24B2F5ACDB200185908 /* TealiumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60F24A2F5ACDB200185908 /* TealiumManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA60F24A2F5ACDB200185908 /* TealiumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TealiumManager.swift; sourceTree = "<group>"; };
 		FA93515E2F5930A6006A1BDD /* TealiumBallinStatCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TealiumBallinStatCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA93516C2F5930A8006A1BDD /* TealiumBallinStatCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TealiumBallinStatCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9351762F5930A8006A1BDD /* TealiumBallinStatCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TealiumBallinStatCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA60F2452F5AC77400185908 /* TealiumLifecycle in Frameworks */,
 				FA60F2432F5AAF6A00185908 /* TealiumAutotracking in Frameworks */,
 				FA60F2412F5AAF5B00185908 /* TealiumCore in Frameworks */,
 			);
@@ -89,6 +93,7 @@
 		FA9351552F5930A6006A1BDD = {
 			isa = PBXGroup;
 			children = (
+				FA60F24A2F5ACDB200185908 /* TealiumManager.swift */,
 				FA9351602F5930A6006A1BDD /* TealiumBallinStatCalculator */,
 				FA93516F2F5930A8006A1BDD /* TealiumBallinStatCalculatorTests */,
 				FA9351792F5930A8006A1BDD /* TealiumBallinStatCalculatorUITests */,
@@ -129,6 +134,7 @@
 			packageProductDependencies = (
 				FA60F2402F5AAF5B00185908 /* TealiumCore */,
 				FA60F2422F5AAF6A00185908 /* TealiumAutotracking */,
+				FA60F2442F5AC77400185908 /* TealiumLifecycle */,
 			);
 			productName = TealiumBallinStatCalculator;
 			productReference = FA93515E2F5930A6006A1BDD /* TealiumBallinStatCalculator.app */;
@@ -256,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA60F24B2F5ACDB200185908 /* TealiumManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +642,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FA60F23C2F5A9EAD00185908 /* XCRemoteSwiftPackageReference "tealium-swift" */;
 			productName = TealiumAutotracking;
+		};
+		FA60F2442F5AC77400185908 /* TealiumLifecycle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA60F23C2F5A9EAD00185908 /* XCRemoteSwiftPackageReference "tealium-swift" */;
+			productName = TealiumLifecycle;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -85,13 +85,13 @@ struct ContentView: View {
                 threeFGM = 0
                 fga = 0
                 fta = 0
-                TealiumHelper.shared.trackEvent(eventName: "ClearButtonTapped")
+                AnalyticsService.shared.trackEvent(name: AnalyticsValues.clear)
             }
         }
         .padding()
         .environment(\.focusedStatField, $focusedField)
         .onAppear {
-            TealiumHelper.shared.trackView(viewName: "HomeView")
+            AnalyticsService.shared.trackView(name: AnalyticsValues.homeview)
         }
         
         .toolbar {
