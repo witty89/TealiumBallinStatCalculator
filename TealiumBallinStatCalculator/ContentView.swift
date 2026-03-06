@@ -85,11 +85,14 @@ struct ContentView: View {
                 threeFGM = 0
                 fga = 0
                 fta = 0
+                TealiumHelper.shared.trackEvent(eventName: "ClearButtonTapped")
             }
         }
         .padding()
         .environment(\.focusedStatField, $focusedField)
-        
+        .onAppear {
+            TealiumHelper.shared.trackView(viewName: "HomeView")
+        }
         
         .toolbar {
             ToolbarItemGroup(placement: .keyboard) {

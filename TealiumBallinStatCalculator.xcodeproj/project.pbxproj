@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA60F22A2F59445100185908 /* NumberField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60F2292F59445100185908 /* NumberField.swift */; };
-		FA60F22C2F59523A00185908 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60F22B2F59523A00185908 /* Stats.swift */; };
+		FA60F2412F5AAF5B00185908 /* TealiumCore in Frameworks */ = {isa = PBXBuildFile; productRef = FA60F2402F5AAF5B00185908 /* TealiumCore */; };
+		FA60F2432F5AAF6A00185908 /* TealiumAutotracking in Frameworks */ = {isa = PBXBuildFile; productRef = FA60F2422F5AAF6A00185908 /* TealiumAutotracking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +29,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FA60F2292F59445100185908 /* NumberField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberField.swift; sourceTree = "<group>"; };
-		FA60F22B2F59523A00185908 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 		FA93515E2F5930A6006A1BDD /* TealiumBallinStatCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TealiumBallinStatCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA93516C2F5930A8006A1BDD /* TealiumBallinStatCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TealiumBallinStatCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9351762F5930A8006A1BDD /* TealiumBallinStatCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TealiumBallinStatCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA60F2432F5AAF6A00185908 /* TealiumAutotracking in Frameworks */,
+				FA60F2412F5AAF5B00185908 /* TealiumCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,14 +79,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA60F23F2F5AAF5B00185908 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA9351552F5930A6006A1BDD = {
 			isa = PBXGroup;
 			children = (
-				FA60F22B2F59523A00185908 /* Stats.swift */,
-				FA60F2292F59445100185908 /* NumberField.swift */,
 				FA9351602F5930A6006A1BDD /* TealiumBallinStatCalculator */,
 				FA93516F2F5930A8006A1BDD /* TealiumBallinStatCalculatorTests */,
 				FA9351792F5930A8006A1BDD /* TealiumBallinStatCalculatorUITests */,
+				FA60F23F2F5AAF5B00185908 /* Frameworks */,
 				FA93515F2F5930A6006A1BDD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,6 +127,8 @@
 			);
 			name = TealiumBallinStatCalculator;
 			packageProductDependencies = (
+				FA60F2402F5AAF5B00185908 /* TealiumCore */,
+				FA60F2422F5AAF6A00185908 /* TealiumAutotracking */,
 			);
 			productName = TealiumBallinStatCalculator;
 			productReference = FA93515E2F5930A6006A1BDD /* TealiumBallinStatCalculator.app */;
@@ -204,6 +212,9 @@
 			);
 			mainGroup = FA9351552F5930A6006A1BDD;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				FA60F23C2F5A9EAD00185908 /* XCRemoteSwiftPackageReference "tealium-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FA93515F2F5930A6006A1BDD /* Products */;
 			projectDirPath = "";
@@ -245,8 +256,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA60F22C2F59523A00185908 /* Stats.swift in Sources */,
-				FA60F22A2F59445100185908 /* NumberField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +613,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA60F23C2F5A9EAD00185908 /* XCRemoteSwiftPackageReference "tealium-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tealium/tealium-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.18.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA60F2402F5AAF5B00185908 /* TealiumCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA60F23C2F5A9EAD00185908 /* XCRemoteSwiftPackageReference "tealium-swift" */;
+			productName = TealiumCore;
+		};
+		FA60F2422F5AAF6A00185908 /* TealiumAutotracking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA60F23C2F5A9EAD00185908 /* XCRemoteSwiftPackageReference "tealium-swift" */;
+			productName = TealiumAutotracking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA9351562F5930A6006A1BDD /* Project object */;
 }
